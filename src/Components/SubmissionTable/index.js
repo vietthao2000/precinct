@@ -33,7 +33,7 @@ class SubmissionTable extends Component {
       </tr>
     )
     return (
-      <Table bordered className="text-center">
+      <Table bordered>
         <thead>
           <tr>
             <th scope="col">Session</th>

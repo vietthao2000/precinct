@@ -20,7 +20,7 @@ class StudentTable extends Component {
     )
 
     return (
-      <Table bordered className="text-center">
+      <Table bordered>
         <thead>
           <tr>
             <th scope="col">Facebook URL</th>
