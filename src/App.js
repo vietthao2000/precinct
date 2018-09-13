@@ -5,7 +5,8 @@ import SubmissionTable from './Components/SubmissionTable';
 import ClassesDropdown from './Components/ClassesDropdown';
 import _ from 'lodash';
 import { Container } from 'reactstrap';
-import { firestore } from './Firebase.js'
+import { firestore } from './Firebase.js';
+import moment from 'moment';
 
 let dummy_data = {
   "2122371191315169":{
@@ -164,9 +165,20 @@ class App extends Component {
         })
         .map(group => groups[group.id] = group)
 
+      let groups_arr = _.values(groups)
+      var last_update = 0;
+
+      groups_arr.map(group => {
+        if (group.git_post) last_update = Math.max(group.git_post.last_update, last_update);
+        if (group.hw_posts) {
+          _.values(group.hw_posts).map(post => last_update = Math.max(post.last_update, last_update))
+        }
+      })
+
       this.setState({
         groups,
-        group_id: _.values(groups)[0].id
+        group_id: _.values(groups)[0].id,
+        last_update: last_update
       })
     })
   }
@@ -177,6 +189,7 @@ class App extends Component {
       return (
         <Container id="main">
           <h1 className="text-spacing text-center">Techkids police submission status</h1>
+          <h2 className="text-center">Last update: { moment.unix(this.state.last_update).fromNow() }</h2>
           <div className="table-spacing text-center">
             <ClassesDropdown groups={ this.state.groups } changeGroup={ this.changeGroup } current_group={ this.state.groups[this.state.group_id] } />
           </div>
