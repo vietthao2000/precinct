@@ -20,7 +20,6 @@ class ClassesDropdown extends Component {
   }
 
   changeValue = (e) => {
-    console.log(this.props.groups[e.currentTarget.dataset.group_id])
     this.props.changeGroup(e.currentTarget.dataset.group_id)
     this.setState({
       group: this.props.groups[e.currentTarget.dataset.group_id]
