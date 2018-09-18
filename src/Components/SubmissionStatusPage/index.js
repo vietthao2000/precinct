@@ -43,11 +43,13 @@ class SubmissionStatusPage extends Component {
         return null;
       })
 
-      this.setState({
-        groups,
-        group_id: _.values(groups)[0].id,
-        last_update: last_update
-      })
+      if (groups && _.values(groups).length) {
+        this.setState({
+          groups,
+          group_id: _.values(groups)[0].id,
+          last_update: last_update
+        })
+      }
     })
   }
 
