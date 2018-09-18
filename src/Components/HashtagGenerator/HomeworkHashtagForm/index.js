@@ -19,7 +19,7 @@ class HomeworkHashtagForm extends Component {
         return null;
       }
 
-      return `#tk_hw_${this.state.class}_${this.state.session} #tk_hw_deadline_${this.state.deadline.unix()}`
+      return `#tk_hw_${this.state.class}_${this.state.session} #tk_hw_deadline_${this.state.deadline.unix()}`.toLowerCase()
     }
 
     this.setState({
