@@ -8,7 +8,7 @@ import StudentTable from './StudentTable';
 import SubmissionTable from './SubmissionTable';
 
 class SubmissionStatusPage extends Component {
-  changeGroup(group_id) {
+  changeGroup = group_id => {
     this.setState({group_id})
   }
 
