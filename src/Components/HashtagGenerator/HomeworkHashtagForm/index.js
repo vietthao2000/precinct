@@ -77,6 +77,11 @@ class HomeworkHashtagForm extends Component {
               <label className="input-title">Deadline</label>
               <Datetime onChange={this.updateDeadline} />
             </FormGroup>
+            <FormGroup>
+              <div className="text-center">
+                { this.state.deadline ? this.state.deadline.fromNow() : '' }
+              </div>
+            </FormGroup>
             <FormGroup className="text-center">
               <Button type="button" color="primary" onClick={this.generateHashtag}>Generate</Button>
             </FormGroup>
