@@ -6,24 +6,28 @@ import HashtagGenerator from './Components/HashtagGenerator';
 import NavBar from './Components/NavBar';
 
 import { Container } from 'reactstrap';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div>
-          <NavBar />
-          
-          <Container>
-            <div id="main">
+      <div>
+        <NavBar />
+        <Router>
+          <div>
+            
+            <Container>
+              <div id="main">
 
-              <Route exact path="/" component={SubmissionStatusPage} />
-              <Route path="/hashtag" component={HashtagGenerator} />
-            </div>
-          </Container>
-        </div>          
-      </Router>
+                <Switch>
+                  <Route exact path="/" component={SubmissionStatusPage} />
+                  <Route path="/hashtag" component={HashtagGenerator} />
+                </Switch>
+              </div>
+            </Container>
+          </div>          
+        </Router>
+      </div>
     );
   }
 }
