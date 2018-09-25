@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { FormGroup, Input, Button, InputGroup  } from 'reactstrap'
-import Datetime from 'react-datetime'
-import 'react-datetime/css/react-datetime.css'
+// import { FormGroup, Input, Button, InputGroup  } from 'reactstrap'
+// import Datetime from 'react-datetime'
+// import 'react-datetime/css/react-datetime.css'
 
 import HomeworkHashtagForm from './HomeworkHashtagForm'
-import HashtagTypeDropdown from './HashtagTypeDropdown'
+// import HashtagTypeDropdown from './HashtagTypeDropdown'
 
 class HashtagGenerator extends Component {
   constructor(props) {
