@@ -13,12 +13,12 @@ if (process.env.NODE_ENV === 'development') {
   };
 } else {
   config = {
-    apiKey: "AIzaSyBubaiMXyO0Y_XQTwWN6isJ1lzsfCE60xY",
-    authDomain: "techkids-police.firebaseapp.com",
-    databaseURL: "https://techkids-police.firebaseio.com",
-    projectId: "techkids-police",
-    storageBucket: "techkids-police.appspot.com",
-    messagingSenderId: "908532066309"
+    apiKey: "AIzaSyC0JzZKXQwOnUQd-zCWgvTFsXlrclSjYWY",
+    authDomain: "techkids-police-production.firebaseapp.com",
+    databaseURL: "https://techkids-police-production.firebaseio.com",
+    projectId: "techkids-police-production",
+    storageBucket: "techkids-police-production.appspot.com",
+    messagingSenderId: "806601575009"
   }
 }
 
