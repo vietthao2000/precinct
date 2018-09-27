@@ -2,7 +2,7 @@ import * as firebase from 'firebase';
 
 var config;
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.ENVIRONMENT === 'development') {
   config = {
     apiKey: "AIzaSyAJREnQb0EnCtxIq0nb3S86NKzcbqmOlWs",
     authDomain: "techkids-police-test.firebaseapp.com",
