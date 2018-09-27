@@ -2,6 +2,8 @@ import * as firebase from 'firebase';
 
 var config;
 
+console.log(process.env.ENVIRONMENT)
+
 if (process.env.ENVIRONMENT === 'development') {
   config = {
     apiKey: "AIzaSyAJREnQb0EnCtxIq0nb3S86NKzcbqmOlWs",
